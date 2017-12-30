@@ -6,7 +6,7 @@ import { H1, H2, List, ListItem } from 'native-base';
 class DogList extends React.Component {
   render() {
     let listDogs = this.props.dogs.map( dog => {
-      return (<Todo key={dog.id} {...dog} toggleFriend={this.props.toggleFriend} />)
+      return (<Dog key={dog.id} {...dog} toggleFriend={this.props.toggleFriend} />)
     });
 
       if( listDogs.length > 0 ){
