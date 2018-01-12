@@ -58,7 +58,12 @@ class App extends React.Component {
           <Container style={{backgroundColor: 'teal'}}>
             <Header>
               <Left>
-              <Button transparent iconLeft title='Home'>
+              <Button 
+                transparent 
+                iconLeft 
+                title='Home'
+                onPress={this.toggleDrawer}
+              >
                 <Icon name='home' />
               </Button>
               </Left>
