@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import {
   Container,
   Header,
@@ -14,7 +14,8 @@ import {
   Right,
   Body,
   Icon,
-  Drawer
+  Drawer,
+  Button,
 } from 'native-base';
 import { NativeRouter, Route, Switch } from 'react-router-native';
 import Sidebar from './components/Sidebar';
@@ -57,14 +58,9 @@ class App extends React.Component {
           <Container style={{backgroundColor: 'teal'}}>
             <Header>
               <Left>
-                <Button
-                  transparent
-                  onPress={this.toggleDrawer}
-                  title='Menu'
-                >
-                {/* TODO figure out how the fuck to make menu icon show up */}
-                  <Icon name='ios-paw' />
-                </Button>
+              <Button transparent iconLeft title='Home'>
+                <Icon name='home' />
+              </Button>
               </Left>
               <Body>
                 <Title>Dog Dates</Title>
