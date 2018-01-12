@@ -1,28 +1,26 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { Container } from 'native-base';
+import { 
+  FooterTab,
+  Button,
+  Icon,
+ } from 'native-base';
 
-const filterLink = (text, current, cb) => {
-  if (text === current)
-    return <Text>{text}</Text>
-  return(
-    <Text
-      onPress={() => cb(text)}
-      style={{textDecoration: 'underline', color: 'blue'}}
-    >
-      {text}
-    </Text>
-  )
-}
-
-const Footer = ({ activeFilter, changeFilter }) => (
-  <Container>
-    <Text>
-      { filterLink('All', activeFilter, changeFilter) }
-      {' '}
-      { filterLink('Friends', activeFilter, changeFilter) }
-    </Text>
-  </Container>
+const Footer = () => (
+  <FooterTab>
+    <Button vertical onPress={() => this.toggleDrawer()}>
+      <Icon name='ios-people' />
+      <Text>Swipe</Text>
+    </Button>
+    <Button vertical onPress={()=> this.openDescription}>
+      <Icon name='ios-contact' />
+      <Text>Profile</Text>
+    </Button>
+    <Button vertical>
+      <Icon name='paw' />
+        <Text>Friends</Text>
+    </Button>
+  </FooterTab>
 )
 
 export default Footer;

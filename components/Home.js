@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 
 const Home = () => (
-  <Text>
+  <Text color='white'>
     Home
   </Text>
 )

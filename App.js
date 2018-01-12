@@ -21,6 +21,7 @@ import Sidebar from './components/Sidebar';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Dates from './components/Dates';
+import RealFooter from './components/Footer';
 
 class App extends React.Component {
   state = { drawerOpen: false }
@@ -53,7 +54,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <NativeRouter>
-          <Container>
+          <Container style={{backgroundColor: 'teal'}}>
             <Header>
               <Left>
                 <Button
@@ -61,11 +62,8 @@ class App extends React.Component {
                   onPress={this.toggleDrawer}
                   title='Menu'
                 >
-                  <Icon
-                    inverted color='blue'
-                    size='large'
-                    name='paw'
-                  />
+                {/* TODO figure out how the fuck to make menu icon show up */}
+                  <Icon name='ios-paw' />
                 </Button>
               </Left>
               <Body>
@@ -97,9 +95,7 @@ class App extends React.Component {
               }
             </Content>
             <Footer>
-              <Body>
-                <Text>Footer Stuff & Things</Text>
-              </Body>
+              <RealFooter />
             </Footer>
           </Container>
         </NativeRouter>
